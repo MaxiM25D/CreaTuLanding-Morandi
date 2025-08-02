@@ -4,9 +4,15 @@
   gap: 0.5rem;
 }
 
+.carrito {
+  font-size: 1.5rem;
+  width: 202px;
+  height: 1.5rem;
+}
+
 .cart-count {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: rgb(28, 255, 69);
+  color: rgb(0, 0, 0);  
   border-radius: 50%;
   padding: 0.15rem 0.5rem;
   font-size: 0.9rem;
