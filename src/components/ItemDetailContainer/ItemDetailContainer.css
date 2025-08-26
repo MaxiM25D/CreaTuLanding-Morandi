@@ -1,0 +1,41 @@
+/* .product-detail {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-detail img {
+  height: 250px;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+}
+
+.product-detail .description {
+  color: #555;
+  margin: 1rem 0;
+}
+
+.product-detail .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.product-detail .category {
+  font-style: italic;
+  color: #888;
+} */
+
+
+.item-detail {
+  display: flex;
+  gap: 200;
+  padding: 2rem;
+}
+
+.item-detail img {
+  width: 200px;
+  height: auto;
+}

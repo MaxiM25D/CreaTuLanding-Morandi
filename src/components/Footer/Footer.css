@@ -1,0 +1,27 @@
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(251, 145, 255); /* rosa suave */
+  font-size: 0.8rem;
+  color: black;
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.social-icons a:hover {
+  color: #e1306c;
+  transform: scale(1.5);
+}

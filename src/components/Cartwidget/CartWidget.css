@@ -4,12 +4,6 @@
   gap: 0.5rem;
 }
 
-.carrito {
-  font-size: 1.5rem;
-  width: 202px;
-  height: 1.5rem;
-}
-
 .cart-count {
   background-color: rgb(28, 255, 69);
   color: rgb(0, 0, 0);  
