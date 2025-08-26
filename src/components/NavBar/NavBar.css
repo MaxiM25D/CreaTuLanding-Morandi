@@ -11,13 +11,16 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  :hover {
+    color: #ffffff;
+  }
 }
 
 .logo-text {
   font-weight: bold;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #4B0082;
+  color: #000000;
 }
 
 .logo-img {
@@ -27,9 +30,14 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 200px;
-  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  gap: 100px;
+  margin: 20;
   padding: 0;
+  :hover {
+    color: #ffffff;
+  }
 }
 
 .nav-links a {
