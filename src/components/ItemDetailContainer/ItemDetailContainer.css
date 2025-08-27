@@ -1,41 +1,81 @@
-/* .product-detail {
-  padding: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+.container-detail {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-detail img {
-  height: 250px;
-  object-fit: contain;
-  margin: 1rem auto;
-  display: block;
+.container-detail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
 }
 
-.product-detail .description {
-  color: #555;
-  margin: 1rem 0;
+.img-detail {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-.product-detail .price {
-  font-size: 1.5rem;
+.img-detail:hover {
+  transform: scale(1.03);
+}
+
+.title {
+  font-size: 1.8rem;
   font-weight: bold;
-  margin: 0.5rem 0;
+  color: #222;
+  margin-bottom: 0.8rem;
 }
 
-.product-detail .category {
-  font-style: italic;
-  color: #888;
-} */
-
-
-.item-detail {
-  display: flex;
-  gap: 200;
-  padding: 2rem;
+.precio {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 0.6rem;
 }
 
-.item-detail img {
-  width: 200px;
-  height: auto;
+.categoria {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.btn-carrito {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff7a18, #af002d);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-carrito:hover {
+  background: linear-gradient(135deg, #af002d, #ff7a18);
+  transform: scale(1.03);
+}
+
+/* 📱 Responsive: en mobile se apilan */
+@media (max-width: 768px) {
+  .container-detail {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img-detail {
+    max-width: 100%;
+  }
+
+  .btn-carrito {
+    width: 100%;
+  }
 }

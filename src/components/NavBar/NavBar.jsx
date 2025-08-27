@@ -20,6 +20,10 @@ function NavBar() {
       <ul className="nav-links">
         <li><Link to="/">INICIO</Link></li>
         <li><Link to="/productos">PRODUCTOS</Link></li>
+        <li><Link to="/categoria/aros">AROS</Link></li>
+        <li><Link to="/categoria/cadenas">CADENAS</Link></li>
+        <li><Link to="/categoria/pulceras">PULCERAS</Link></li>
+        <li><Link to="/categoria/anillos">ANILLOS</Link></li>
         <li><Link to="/contacto">CONTACTO</Link></li>
       </ul>
       <Link to="/carrito">

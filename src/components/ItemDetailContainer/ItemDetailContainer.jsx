@@ -1,26 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getProductoById } from "../../data/productos";
 import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
+  const [item, setItem] = useState(null);
   const { id } = useParams();
-  const [producto, setProducto] = useState(null);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => setProducto(data));
+    getProductoById(id).then((res) => setItem(res));
   }, [id]);
 
-  if (!producto) return <p>Cargando producto...</p>;
+  if (!item) return <p>⌛Cargando...</p>;
 
   return (
-    <div className="item-detail">
-        <h2>{producto.title}</h2>
-        <img src={producto.image} alt={producto.title} />
-        <p>{producto.description}</p>
-        <h3>${producto.price}</h3>
-        <button>Añadir al carrito</button>
+    <div className="container-detail">
+      <h2 className="title">{item.nombre}</h2>
+      <img src={item.img} alt={item.nombre} className="img-detail" />
+      <p className="precio">Precio: ${item.precio}</p>
+      <p className="categoria">Categoría: {item.categoria}</p>
+      <button className="btn-carrito">🛒Agregar al carrito</button>
     </div>
   );
 }

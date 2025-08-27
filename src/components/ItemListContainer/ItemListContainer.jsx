@@ -1,25 +1,27 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../ProductCard/ProductCard";
+import { useParams } from "react-router-dom";
+import { getProductos, getProductosByCategoria } from "../../data/productos";
+import ItemList from "../ItemList/ItemList";
+/* import ProductCard from "../ProductCard/ProductCard"; */
 import "./ItemListContainer.css";
 
-function ItemListContainer({ greeting }) {
-  const [productos, setProductos] = useState([]);
+function ItemListContainer() {
+  const [items, setItems] = useState([]);
+  const { categoriaId } = useParams();
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/category/jewelery")
-      .then((res) => res.json())
-      .then((data) => setProductos(data));
-  }, []);
+    if (categoriaId) {
+      getProductosByCategoria(categoriaId).then((res) => setItems(res));
+    } else {
+      getProductos().then((res) => setItems(res));
+    }
+  }, [categoriaId]);
 
   return (
-    <div className="item-list-container">
-      <h2 className="title">{greeting}</h2>
-      <div className="product-grid">
-        {productos.map((prod) => (
-          <ProductCard key={prod.id} producto={prod} />
-        ))}
-      </div>
-    </div>
+    <section>
+      <h2>{categoriaId ? `Productos de ${categoriaId}` : "Todos los Productos"}</h2>
+      <ItemList productos={items} />
+    </section>
   );
 }
 
