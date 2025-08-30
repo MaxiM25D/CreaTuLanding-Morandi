@@ -18,8 +18,8 @@ function ItemListContainer() {
   }, [categoriaId]);
 
   return (
-    <section>
-      <h2>{categoriaId ? `Productos de ${categoriaId}` : "Todos los Productos"}</h2>
+    <section className="item-list-container">
+      <h2 className="title-list-container">{categoriaId ? `PRODUCTOS DE ${categoriaId}` : "TODOS LOS PRODUCTOS"}</h2>
       <ItemList productos={items} />
     </section>
   );

@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Inicio from "./pages/Inicio";
-import Productos from "./pages/Productos";
-import Contacto from "./pages/Contacto";
-import Carrito from "./pages/Carrito";
+import Inicio from "./pages/Inicio/Inicio";
+import Contacto from "./pages/Contacto/Contacto";
+import Carrito from "./pages/Carrito/Carrito";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 

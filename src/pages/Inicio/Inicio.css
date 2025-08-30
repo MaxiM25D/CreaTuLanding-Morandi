@@ -1,0 +1,74 @@
+.inicio {
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inicio-title {
+  font-size: 2.5rem;
+  color: #4B0082; 
+  margin-bottom: 0.5rem;
+}
+
+.inicio-subtitle {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.inicio-subtitle .brand {
+  font-weight: bold;
+  color: #6a0dad;
+}
+
+.inicio-banner {
+  width: 100%;
+  height: 500px;
+  background-color: #ff5fec8a;
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+.banner-img {
+  
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  transition: transform 1s ease-in-out;
+}
+
+.banner-img:hover {
+  transform: scale(1.09);
+}
+
+
+@media (max-width: 768px) {
+  .inicio-title {
+    font-size: 2rem;
+  }
+
+  .inicio-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio {
+    padding: 1.5rem 1rem;
+  }
+
+  .inicio-title {
+    font-size: 1.6rem;
+  }
+
+  .inicio-subtitle {
+    font-size: 0.95rem;
+  }
+}
