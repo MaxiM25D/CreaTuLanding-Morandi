@@ -30,7 +30,7 @@ function NavBar() {
             onMouseEnter={() => setOpen(true)} 
             onMouseLeave={() => setOpen(false)}
           >
-        <li><Link to="/productos" className="dropdown-title">PRODUCTOS▾</Link></li>    
+        <Link to="/productos" className="dropdown-title">PRODUCTOS▾</Link>  
             {open && (
               <ul className="dropdown-menu">
                 <li><Link to="/categoria/anillos">ANILLOS</Link></li>
