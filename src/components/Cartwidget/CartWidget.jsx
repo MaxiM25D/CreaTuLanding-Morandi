@@ -1,9 +1,10 @@
 import './CartWidget.css'
+import { FaShoppingCart } from "react-icons/fa";
 
 function CartWidget() {
   return (
     <div className="cart-widget">
-      <span role="img" aria-label="carrito">🛒</span>
+      <FaShoppingCart className='cart-btn' />
       <span className="cart-count">3</span>
     </div>
   )

@@ -2,7 +2,7 @@
   max-width: 500px;
   margin: 2rem auto;
   padding: 1.5rem;
-  background: #fff;
+  background: #ffa8eea1;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -11,7 +11,7 @@
 
 .container-detail:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 22px #000000;
 }
 
 .img-detail {
@@ -24,19 +24,22 @@
 
 .img-detail:hover {
   transform: scale(1.03);
+  box-shadow: 0 10px 22px #000000;
 }
 
 .title {
+  margin-bottom: 20px;
   font-size: 1.8rem;
   font-weight: bold;
   color: #222;
-  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
+  background-color: #e75cd4e2;
 }
 
 .precio {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #27ae60;
+  color: #000000;
   margin-bottom: 0.6rem;
 }
 
@@ -51,7 +54,7 @@
   padding: 1rem;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ff7a18, #af002d);
+  background: linear-gradient(135deg, #fb97fc, #d643ca);
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
@@ -60,11 +63,11 @@
 }
 
 .btn-carrito:hover {
-  background: linear-gradient(135deg, #af002d, #ff7a18);
+  background: linear-gradient(135deg, #d643ca, #fb97fc);
   transform: scale(1.03);
+  box-shadow: 0 5px 15px #000000;
 }
 
-/* 📱 Responsive: en mobile se apilan */
 @media (max-width: 768px) {
   .container-detail {
     flex-direction: column;

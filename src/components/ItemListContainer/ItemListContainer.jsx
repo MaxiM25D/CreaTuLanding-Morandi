@@ -19,7 +19,7 @@ function ItemListContainer() {
 
   return (
     <section className="item-list-container">
-      <h2 className="title-list-container">{categoriaId ? `PRODUCTOS DE ${categoriaId}` : "TODOS LOS PRODUCTOS"}</h2>
+      <h2 className="title-list-container">{categoriaId ? `PRODUCTOS DE ${categoriaId.toUpperCase()}` : "TODOS LOS PRODUCTOS"}</h2>
       <ItemList productos={items} />
     </section>
   );
