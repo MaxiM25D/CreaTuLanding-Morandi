@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductoById } from "../../data/productos";
+import ItemDetail from "../ItemDetail/ItemDetail"; 
 import "./ItemDetailContainer.css";
 
 function ItemDetailContainer() {
@@ -14,13 +15,7 @@ function ItemDetailContainer() {
   if (!item) return <p>⌛Cargando...</p>;
 
   return (
-    <div className="container-detail">
-      <h2 className="title">{item.nombre}</h2>
-      <img src={item.img} alt={item.nombre} className="img-detail" />
-      <p className="precio">Precio: ${item.precio}</p>
-      <p className="categoria">Categoría: {item.categoria}</p>
-      <button className="btn-carrito">🛒Agregar al carrito</button>
-    </div>
+    <ItemDetail item={item} />
   );
 }
 
