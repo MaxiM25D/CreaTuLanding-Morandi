@@ -52,24 +52,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* .btn-carrito {
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #fb97fc, #FF90BC);
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-carrito:hover {
-  background: linear-gradient(135deg, #FF90BC, #fb97fc);
-  transform: scale(1.03);
-  box-shadow: 0 5px 15px #000000;
-} */
 
 @media (max-width: 768px) {
   .container-detail {
