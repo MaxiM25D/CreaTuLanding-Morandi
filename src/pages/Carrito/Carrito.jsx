@@ -63,7 +63,7 @@ function Carrito({ greeting }) {
       <section className="carrito">
         <h1 className="carrito-title">✅¡Gracias por tu compra!✅</h1>
         <p className="carrito-order-id">
-          Tu número de orden es: <strong>{orderId}</strong>
+          Tu número de orden es: <strong>"{orderId}"</strong>
         </p>
         
       </section>

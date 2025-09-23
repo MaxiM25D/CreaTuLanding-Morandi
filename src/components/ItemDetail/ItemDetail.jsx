@@ -13,7 +13,6 @@ function ItemDetail({ item }) {
     const qty = Number(cantidad);
     if (isNaN(qty) || qty <= 0) return;
     addItemToCart(item, qty);
-    // opcional: feedback
     /* window.alert(`${qty} x ${item.nombre} agregado al carrito`); */
   };
 
@@ -23,7 +22,6 @@ function ItemDetail({ item }) {
       <img src={item.img} alt={item.nombre || "Producto"} className="img-detail" />
       <p className="precio">Precio: ${Number(item.precio).toLocaleString()}</p>
       <p className="categoria">Categoría: {item.categoria}</p>
-
       <ItemCount stock={10} initial={1} onAdd={handleAdd} />
     </div>
   );

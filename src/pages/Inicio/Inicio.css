@@ -1,7 +1,9 @@
 .inicio {
-  padding: 2rem;
+  display: block;
+  margin: 0 auto;
+  padding: 3rem;
   text-align: center;
-  background-color: #F8E8EE;
+  background-color: #f5eded;
 }
 
 .inicio-title {
@@ -45,7 +47,7 @@
 
 .banner-img {
   width: 100%;
-  height: auto;
+  height: 80%;
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }

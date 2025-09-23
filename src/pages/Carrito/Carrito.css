@@ -169,6 +169,20 @@
   background: #bb326d;
 }
 
+/* COMPRA FINALIZADA*/
+.carrito-order-id {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #FF90BC;
+}
+.carrito-order-id strong {
+  font-weight: bold;
+  color: #000000;
+}
+
+
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .carrito-item {
