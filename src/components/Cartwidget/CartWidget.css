@@ -7,7 +7,7 @@
 .cart-btn {
   background: none;
   border: none;
-  color: #000000;
+  color: #F5EDED;
   cursor: pointer;
   font-size: 1.7rem;
 }
@@ -15,7 +15,7 @@
 .cart-btn:hover {
   transform: scale(1.1);
   transition: 0.2s;
-  color: #0000007f;
+  color: #0000003f;
 }
 .cart-count {
   background-color: #ffffff;

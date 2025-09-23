@@ -14,7 +14,7 @@ function ItemDetail({ item }) {
     if (isNaN(qty) || qty <= 0) return;
     addItemToCart(item, qty);
     // opcional: feedback
-    // window.alert(`${qty} x ${item.nombre} agregado al carrito`);
+    /* window.alert(`${qty} x ${item.nombre} agregado al carrito`); */
   };
 
   return (

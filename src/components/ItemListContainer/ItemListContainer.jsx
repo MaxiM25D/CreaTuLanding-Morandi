@@ -1,25 +1,38 @@
 import { useEffect, useState } from "react";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import { getProductos, getProductosByCategoria } from "../../data/productos";
+import { db } from "../../data/firebaseConfig";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
 function ItemListContainer() {
-  const [items, setItems] = useState([]);
+  const [productos, setProductos] = useState([]);
   const { categoriaId } = useParams();
 
   useEffect(() => {
-    if (categoriaId) {
-      getProductosByCategoria(categoriaId).then((res) => setItems(res));
-    } else {
-      getProductos().then((res) => setItems(res));
-    }
+    const productosRef = collection(db, "productos");
+
+    const q = categoriaId
+      ? query(productosRef, where("categoria", "==", categoriaId))
+      : productosRef;
+
+    getDocs(q).then((resp) => {
+      setProductos(
+        resp.docs.map((doc) => {
+          return { ...doc.data()};
+        })
+      );
+    });
   }, [categoriaId]);
 
   return (
     <section className="item-list-container">
-      <h2 className="title-list-container">{categoriaId ? `PRODUCTOS DE ${categoriaId.toUpperCase()}` : "TODOS LOS PRODUCTOS"}</h2>
-      <ItemList productos={items} />
+      <h2 className="title-list-container">
+        {categoriaId 
+        ? `PRODUCTOS DE ${categoriaId.toUpperCase()}` 
+        : "TODOS LOS PRODUCTOS"}
+      </h2>
+      <ItemList productos={productos} />
     </section>
   );
 }

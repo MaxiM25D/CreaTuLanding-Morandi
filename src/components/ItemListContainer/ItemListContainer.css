@@ -1,7 +1,9 @@
+
 .item-list-container {
+  max-width: auto;
   padding: 40px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #E1ECC8;
 }
 
 .title-list-container {
@@ -12,5 +14,5 @@
   margin-bottom: 30px;
   border-radius: 80px;
   color: #000000;
-  background-color: rgb(251, 145, 255);
+  background-color: #FF90BC;
 }

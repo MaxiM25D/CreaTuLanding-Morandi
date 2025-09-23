@@ -1,21 +1,25 @@
 .inicio {
   padding: 2rem;
   text-align: center;
+  background-color: #F8E8EE;
 }
 
 .inicio-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #86A788;
 }
 
 .inicio-subtitle {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #86A788;
+
 }
 
 .brand {
   font-weight: bold;
-  color: #d4af37; 
+  color: #86A788;
 }
 
 .inicio-destacados {
@@ -28,7 +32,7 @@
 .inicio-banner {
   flex: 1 1 250px; 
   max-width: 350px;
-  background: #fff;
+  background: #E1ECC8;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);

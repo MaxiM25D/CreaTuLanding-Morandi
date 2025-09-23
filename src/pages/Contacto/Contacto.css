@@ -13,7 +13,7 @@
 .contacto h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #4B0082; /* un violeta elegante */
+  color: #FF90BC; /* un violeta elegante */
   text-align: center;
 }
 
@@ -35,14 +35,14 @@
 
 .form-contacto input:focus,
 .form-contacto textarea:focus {
-  border-color: #4B0082;
+  border-color: #FF90BC;
   box-shadow: 0 0 6px rgba(75, 0, 130, 0.2);
   outline: none;
 }
 
 .form-contacto button {
   padding: 0.9rem;
-  background: #4B0082;
+  background: #FF90BC;
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -53,7 +53,7 @@
 }
 
 .form-contacto button:hover {
-  background: #6a0dad;
+  background: #f469a0;
   transform: translateY(-2px);
 }
 

@@ -1,11 +1,39 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import productos from "../../data/productos"; 
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../data/firebaseConfig";
 import "./Inicio.css";
 
 function Inicio({ greeting }) {
-  const destacados = productos.filter(
-    (prod) => prod.id === "7" || prod.id === "1"
-  );
+  const [destacados, setDestacados] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchDestacados = async () => {
+      try {
+        // Creamos una query para traer productos destacados (ejemplo: id 1 o 7)
+        const q = query(
+          collection(db, "productos"),
+          where("destacado", "==", true)
+        );
+
+        const querySnapshot = await getDocs(q);
+
+        const productosFirebase = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        setDestacados(productosFirebase);
+      } catch (error) {
+        console.error("Error obteniendo destacados:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDestacados();
+  }, []);
 
   return (
     <section className="inicio">
@@ -15,7 +43,9 @@ function Inicio({ greeting }) {
       </p>
 
       <div className="inicio-destacados">
-        {destacados.length > 0 ? (
+        {loading ? (
+          <p>Cargando destacados...</p>
+        ) : destacados.length > 0 ? (
           destacados.map((prod) => (
             <div key={prod.id} className="inicio-banner">
               <Link to={`/producto/${prod.id}`}>

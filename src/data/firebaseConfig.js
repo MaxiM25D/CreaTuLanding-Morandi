@@ -4,19 +4,22 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACXO549xbSYn9P1Wo_eU4rf0CIW2TjWGU",
-  authDomain: "prueba1-93e58.firebaseapp.com",
-  projectId: "prueba1-93e58",
-  storageBucket: "prueba1-93e58.firebasestorage.app",
-  messagingSenderId: "568709784551",
-  appId: "1:568709784551:web:d7ab01d48a86d87f2e5342",
-  measurementId: "G-QSYNQL226P"
+  apiKey: "AIzaSyDj8nqi2yaYahSssX24DJTBMSLCUI4yTPQ",
+  authDomain: "sm-glamour.firebaseapp.com",
+  projectId: "sm-glamour",
+  storageBucket: "sm-glamour.firebasestorage.app",
+  messagingSenderId: "290060459618",
+  appId: "1:290060459618:web:cc5b494666b94192983b3b",
+  measurementId: "G-W3WSZ5BJ52"
 };
 
 // Initialize Firebase
- const app = initializeApp(firebaseConfig);
+ export const app = initializeApp(firebaseConfig);
  const analytics = getAnalytics(app);
+ export const db = getFirestore(app);
 
 
 // 1) Una referencia a la aplicacion/plataforma de firebase (es la constante "app")
 // 2) Una referencia a la base de datos de firebase (Se hace con la funcion getFirestore de firebase)
+// 3) Una referencia a la coleccion (existente o no) de firebase
+// 4) Hago la consulta addDoc
